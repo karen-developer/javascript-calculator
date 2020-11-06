@@ -11,11 +11,11 @@ body {
 
 .container {
   display: grid;
-  width: 80%;
+  width: 90%;
   grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
   grid-gap: 6em;
   align-items: center;
-  margin: 8em auto 3em;
+  margin: 8em auto 1em;
 }
 
 .cal-wrapper {
@@ -84,7 +84,7 @@ button {
   text-align: center;
   width: 2.5em;
   height: 1.9em;
-  margin: 0 0.5em 0.5em 0;
+  margin: 0.2em 0.5em 0.5em 0;
   display: block;
   float: left;
   line-height: 1;
@@ -196,6 +196,7 @@ button.black-bg {
 .footer {
   color: #c3c9d3;
   text-align: center;
+  margin: 5rem;
 }
 
 .mysite {
