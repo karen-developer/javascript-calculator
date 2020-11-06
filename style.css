@@ -13,9 +13,9 @@ body {
   display: grid;
   width: 70%;
   grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
-  grid-gap: 5em;
+  grid-gap: 6em;
   align-items: center;
-  margin: 8em auto 5em;
+  margin: 8em auto 3em;
 }
 
 .cal-wrapper {
