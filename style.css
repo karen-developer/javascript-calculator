@@ -11,7 +11,7 @@ body {
 
 .container {
   display: grid;
-  width: 70%;
+  width: 80%;
   grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
   grid-gap: 6em;
   align-items: center;
