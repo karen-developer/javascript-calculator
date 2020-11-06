@@ -1,0 +1,260 @@
+$white: #e9e8e8;
+$primary: #495464;
+$black: #2d2d2d;
+$screen: lighten(#4ac8cc,10%);
+$button: lighten($black,20%);
+$bg: #8d959b;
+$red: lighten(rgb(104, 18, 58), 10%);
+$history-bg: #c3c9d3;
+
+* {
+    box-sizing: border-box;
+}
+body {
+    background: $primary;
+    font-family: 'Roboto Mono', monospace;
+    color: $black;
+    position: relative;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    grid-gap: 5em;
+    align-items: center;
+    margin: 8em auto 5em;
+}
+
+.cal-wrapper {
+    justify-self: end;
+    width: 11.5em;
+    padding: .7em .7em .3em .7em;     
+    font-size: 1.8em;
+    background: $bg;
+    border-radius: .4em;
+    box-shadow:
+        darken($bg, 10%) 0 .3em 0 0,
+        darken($primary, 8%) -.5em 1em 0 0
+        ;
+    border: .1em solid darken($bg, 10%);
+    border-top-color: lighten($bg, 10%);
+    border-right-color: lighten($bg, 10%);
+}
+
+.solar {
+    background: #3e4e45;
+    width: 3.8em;
+    padding: .55em .25em;    
+    margin: 0 6.1em;    
+    overflow: hidden;
+    position: relative;
+    border-radius: .1em;
+    border: .1em solid lighten($black, 2%);
+    border-top-color: darken($bg, 20%);
+    border-right-color: darken($bg, 20%);
+    box-shadow:
+        inset darken($black,30%) 0 .15em 0 0,
+        inset rgba($black,.3) -.2em .35em 0 0;               
+}
+
+.result {
+    background: $screen;
+    padding: .6em .5em .3em;
+    line-height: 1;
+    text-align: right;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1em;
+    margin: .5em 0;
+    border-radius: .2em;
+    color: darken($screen, 35%);
+    overflow: hidden;
+    position: relative;
+    border: .1em solid lighten($bg, 15%);
+    border-top-color: darken($bg, 20%);
+    border-right-color: darken($bg, 20%);
+    box-shadow:      
+        inset darken($bg,30%) 0 .15em 0 0,
+        inset rgba($black,.3) -.2em .35em 0 0;
+}
+
+.buttons{
+    padding: .2em .0em .2em .5em;
+    overflow: hidden;
+    border: .2em solid darken($bg, 10%);
+    border-left-color: lighten($bg, 10%);
+    border-bottom: 0;
+    border-radius: .3em;
+    background: $bg;
+    margin-bottom: -.2em;
+    width: 10em;
+}
+
+button {
+    border: 0;
+    font-family: 'Roboto Mono', monospace;
+    background: $button;
+    color: $white;
+    font-size: 0.8em;
+    width: 2.3em;
+    height: 1.8em;
+    padding-top: .25em;
+    margin: 0 .5em .5em 0;
+    display: block;
+    float: left;
+    line-height: 1;
+    border-radius: .2em;
+    cursor: pointer;
+    border: .05em solid darken($button, 15%);
+    border-top-color: lighten($button, 15%);
+    border-right-color: lighten($button, 15%);
+    text-shadow:
+        darken($button, 15%) 0 -.1em 0;
+    
+    box-shadow:
+        darken($button, 15%) 0 .2em 0 0,
+        $black 0 .2em 0 .05em,
+        darken($bg, 10%) -.1em .3em 0 0,
+        darken($bg, 10%) -.2em .4em 0 0;
+    position: relative;
+    &:active {
+        top: .1em;
+        //background: $black;
+        box-shadow:
+            darken($button, 15%) 0 .1em 0 0,
+            $black 0 .1em 0 .05em,
+            darken($bg, 10%) -.1em .2em 0 0;
+    }
+    &:focus{
+        color: #f7ca78;
+        outline:none;
+    }
+}
+
+button.plus {   
+    width: 5.1em;
+}
+
+button.red-bg {
+    background: $red;
+    border: .05em solid darken($red, 15%);
+    border-top-color: lighten($red, 15%);
+    border-right-color: lighten($red, 15%);
+    text-shadow:
+        darken($red, 15%) 0 -.1em 0;
+    
+    box-shadow:
+        darken($red, 15%) 0 .2em 0 0,
+        $black 0 .2em 0 .05em,
+        darken($bg, 10%) -.1em .3em 0 0,
+        darken($bg, 10%) -.2em .4em 0 0;
+    
+        &:focus{
+            color: $white;
+            outline:none;}
+}
+
+button.black-bg {
+    background: $black;
+    border: .05em solid darken($black, 15%);
+    border-top-color: lighten($black, 15%);
+    border-right-color: lighten($black, 15%);
+    text-shadow:
+        darken($black, 15%) 0 -.1em 0;
+    
+    box-shadow:
+        darken($black, 15%) 0 .2em 0 0,
+        $black 0 .2em 0 .05em,
+        darken($bg, 10%) -.1em .3em 0 0,
+        darken($bg, 10%) -.2em .4em 0 0;
+}
+
+#history {
+    justify-self: start;
+    display: grid;
+    width: 16em;
+    grid-template-rows: 4.5em 13em 4.2em;
+    position: relative;
+	background: $history-bg;
+    box-shadow: -5px 7px 15px 0 rgba(0,0,0,0.3);
+    -webkit-transform: rotate(1deg);
+	-moz-transform: rotate(1deg);
+	-o-transform: rotate(1deg);
+	-ms-transform: rotate(1deg);
+	transform: rotate(1deg);
+    
+	&:before  {
+		display: block;
+		content: ""; 
+		background: rgba(227, 200, 114, 0.40);
+		width: 120px;
+		height: 28px;
+	    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+	    border-radius: 6px/18px 0;
+		position: absolute;
+		top: -13px;
+		left: 70px;
+		-webkit-transform: rotate(-2deg);
+		-moz-transform: rotate(-2deg);
+		-o-transform: rotate(-2deg);
+		-ms-transform: rotate(-2deg);
+		transform: rotate(-2deg);
+	}
+
+    &:after {
+        content: "";
+        display: table;
+        clear: both;        
+    }
+    h2 {
+        text-align: center;
+        font-size: 1.8em;       
+        font-family: 'Roboto Mono', monospace;   
+    }
+
+    .history-content {                        
+        background: $history-bg;                
+        overflow: auto;        
+
+        p.content {
+            text-align: right;
+            font-family: 'Roboto Mono', monospace;
+            margin: 5px;
+            padding: 5px 15px 5px 60px;
+            font-size: 1.2em;
+        }                
+    }	
+
+    button.clear {
+        float: right;
+        font-size: .85em;
+        width: 4em;
+        height: 2em;
+        padding-top: .25em;
+        margin: 1.5em 1em 0 0;
+
+    }
+}
+
+.footer {        
+    color: $history-bg;
+    text-align: center;
+}
+  
+.mysite {
+    color: $white;
+    text-decoration: none;
+}
+  
+.mysite:hover {
+    color: $red;
+    text-decoration: none;
+}
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    .cal-wrapper, #history {
+        justify-self: center;
+    }
+}
