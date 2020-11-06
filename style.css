@@ -11,10 +11,11 @@ body {
 
 .container {
   display: grid;
+  width: 70%;
   grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
   grid-gap: 5em;
   align-items: center;
-  margin: 8em auto 5em;
+  margin: 15em auto 5em;
 }
 
 .cal-wrapper {
