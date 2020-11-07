@@ -19,16 +19,16 @@ body {
 
 .container {
     display: grid;
-    width: 60%;
+    width: 70%;
     grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-    grid-gap: 5em;
+    grid-gap: 6em;
     align-items: center;
     justify-items: center;
-    margin: 5em auto;
+    margin: 6em auto;
 }
 
 .cal-wrapper {
-    width: 11.5em;
+    width: 16.2em;
     padding: .7em .7em .3em .7em;     
     font-size: 1.8em;
     background: $bg;
@@ -44,9 +44,9 @@ body {
 
 .solar {
     background: #3e4e45;
-    width: 3.8em;
-    padding: .55em .25em;    
-    margin: 0 6.1em;    
+    width: 5em;
+    padding: .7em .25em;    
+    margin: 0 9.5em;    
     overflow: hidden;
     position: relative;
     border-radius: .1em;
@@ -60,11 +60,11 @@ body {
 
 .result {
     background: $screen;
-    padding: .6em .5em .3em;
+    padding: .8em .5em .3em;
     line-height: 1;
     text-align: right;
     font-family: 'Roboto Mono', monospace;
-    font-size: 1em;
+    font-size: 1.2em;
     margin: .5em 0;
     border-radius: .2em;
     color: darken($screen, 35%);
@@ -79,7 +79,7 @@ body {
 }
 
 .buttons{
-    padding: .2em .0em .2em .5em;
+    padding: .35em .0em .35em .5em;
     overflow: hidden;
     border: .2em solid darken($bg, 10%);
     border-left-color: lighten($bg, 10%);
@@ -87,7 +87,7 @@ body {
     border-radius: .3em;
     background: $bg;
     margin-bottom: -.2em;
-    width: 10em;
+    width: 14.6em;
 }
 
 button {
@@ -96,11 +96,11 @@ button {
     font-family: 'Roboto Mono', monospace;
     background: $button;
     color: $white;
-    font-size: 0.75em;
+    font-size: 0.8em;
     text-align: center;
-    width: 2.5em;
-    height: 2em;
-    margin: .2em .5em .5em 0;
+    width: 3.5em;
+    height: 2.8em;
+    margin: .2em .5em .5em .2em;
     display: block;
     float: left;
     line-height: 1;
@@ -132,7 +132,7 @@ button {
 }
 
 button.plus {   
-    width: 5.45em;
+    width: 7.7em;
 }
 
 button.red-bg {
@@ -171,9 +171,9 @@ button.black-bg {
 
 #history {
     display: grid;
-    width: 16em;
+    width: 22em;
     margin-top: 1em;
-    grid-template-rows: 4.5em 13em 4.2em;
+    grid-template-rows: 6.5em 18em 5em;
     position: relative;
 	background: $history-bg;
     box-shadow: -5px 7px 15px 0 rgba(0,0,0,0.3);
@@ -187,13 +187,13 @@ button.black-bg {
 		display: block;
 		content: ""; 
 		background: rgba(227, 200, 114, 0.40);
-		width: 120px;
-		height: 28px;
+		width: 180px;
+		height: 45px;
 	    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 	    border-radius: 6px/18px 0;
 		position: absolute;
-		top: -13px;
-		left: 70px;
+		top: -25px;
+		left: 90px;
 		-webkit-transform: rotate(-2deg);
 		-moz-transform: rotate(-2deg);
 		-o-transform: rotate(-2deg);
@@ -209,7 +209,8 @@ button.black-bg {
 
     h2 {
         text-align: center;
-        font-size: 1.8em;       
+        font-size: 2.2em;  
+        padding: .2em;     
         font-family: 'Roboto Mono', monospace;   
     }
 
@@ -220,18 +221,16 @@ button.black-bg {
         p.content {
             text-align: right;
             font-family: 'Roboto Mono', monospace;
-            margin: 5px;
-            padding: 5px 15px 5px 60px;
-            font-size: 1.2em;
+            margin: 0 2em 1em 4em;
+            font-size: 1.5em;
         }                
     }	
 
     button.clear {
         float: right;
         font-size: .85em;
-        width: 4em;
-        height: 2em;
-        padding-top: .25em;
+        width: 5em;
+        height: 2.8em;
         margin: 1.5em 1em 0 0;
     }
 }
@@ -239,6 +238,7 @@ button.black-bg {
 footer {        
     color: $history-bg;
     text-align: center;
+    font-size: 1.3em;
     margin-bottom: 3rem;
 
     .karen {
