@@ -240,16 +240,16 @@ footer {
     color: $history-bg;
     text-align: center;
     margin-bottom: 3rem;
-}
-  
-.karen {
-    color: $white;
-    text-decoration: none;
-}
-  
-.karen:hover {
-    color: $red;
-    text-decoration: none;
+
+    .karen {
+        color: $white;
+        text-decoration: none;
+    }
+      
+    .karen:hover {
+        color: rgb(243, 179, 222);
+        text-decoration: none;
+    }
 }
 
 @media only screen 

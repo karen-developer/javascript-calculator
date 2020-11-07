@@ -199,14 +199,12 @@ footer {
   text-align: center;
   margin-bottom: 3rem;
 }
-
-.karen {
+footer .karen {
   color: #e9e8e8;
   text-decoration: none;
 }
-
-.karen:hover {
-  color: #931a52;
+footer .karen:hover {
+  color: #f3b3de;
   text-decoration: none;
 }
 
