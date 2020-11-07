@@ -1,19 +1,13 @@
 $(document).ready(function() {
 
-	// Activate "clear history" link
-	$("#history button.clear").click(function () {
-		$("#history p.content").html("");
-	});
+	var num1 = [],
+		num2 = [],	
+		current = null,
+		operator = null,
+		result = null,
+		objDiv = null;
 
-	// Reset variables 
-		var num1 = [],
-			num2 = [],	
-			current = null,
-			operator = null,
-			result = null,
-			objDiv = null;
-
-	// When a key is clicked 
+	// Key click
 	$(".keys").click(function () {
 		var input = $(this).html();
 
@@ -50,7 +44,7 @@ $(document).ready(function() {
 				$(".result").html(num1.join(''));
 				removeClear();
 			}
-		} // end number
+		} 
 
 		// Operator 
 		if ($(this).hasClass("operator")) {
@@ -90,7 +84,7 @@ $(document).ready(function() {
 					objDiv.scrollTop = objDiv.scrollHeight;
 				}
 			}
-		} // end operator
+		} 
 
 		// Equals sign 
 		if ($(this).hasClass("equals")) {
@@ -99,7 +93,7 @@ $(document).ready(function() {
 			if (num1 !== []) {
 				calcResult();
 			}
-		} // end equals
+		} 
 
 		// Clear button 
 		if ($(this).hasClass("clear")) {
@@ -125,7 +119,7 @@ $(document).ready(function() {
 					clear();
 				}
 			}
-		} // end clear
+		} 
 
 		// Plus/minus button
 		if ($(this).hasClass("pm")) {
@@ -139,7 +133,7 @@ $(document).ready(function() {
 				num2 = [+num2.join('') * -1];
 				$(".result").html(num2.join(''));
 			}
-		} // end plus/minus
+		} 
 
 		// Percent button 
 		if ($(this).hasClass("percent")) {
@@ -153,9 +147,9 @@ $(document).ready(function() {
 				num2 = [x * 0.01];
 				$(".result").html(num2.join(''));
 			}
-		} // end percent							
+		} 							
 
-	}); // end key click
+	}); 
 
 	// Change behavior of clear button 
 	function removeClear() {
@@ -166,7 +160,7 @@ $(document).ready(function() {
 	function addClear() {
 		$(".calculator .clear").addClass("all");
 		$(".calculator .clear").html("AC");
-	} // end clear functions
+	} 
 
 	// Calculate result 
 	function calcResult() {
@@ -206,7 +200,7 @@ $(document).ready(function() {
 			current = 3;
 			addClear();
 		}
-	} // end calcResult function
+	} 
 
 	// Trim extra zeros, trim too many decimals 
 	function formatNum(result) {
@@ -227,4 +221,9 @@ $(document).ready(function() {
 		objDiv.scrollTop = objDiv.scrollHeight;
 		addClear();
 	}
+
+	// Clear history
+	$("#history button.clear").click(function () {
+		$("#history p.content").html("");
+	});
 });

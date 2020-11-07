@@ -19,15 +19,15 @@ body {
 
 .container {
     display: grid;
-    width: 90%;
-    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
-    grid-gap: 6em;
+    width: 50em;
+    grid-template-columns: 25em 10em;
+    grid-gap: 7em;
     align-items: center;
-    margin: 8em auto 1em;
+    justify-items: center;
+    margin: 5em auto;
 }
 
 .cal-wrapper {
-    justify-self: end;
     width: 11.5em;
     padding: .7em .7em .3em .7em;     
     font-size: 1.8em;
@@ -92,13 +92,14 @@ body {
 
 button {
     border: 0;
+    padding: 0;
     font-family: 'Roboto Mono', monospace;
     background: $button;
     color: $white;
     font-size: 0.75em;
     text-align: center;
     width: 2.5em;
-    height: 1.9em;
+    height: 2em;
     margin: .2em .5em .5em 0;
     display: block;
     float: left;
@@ -109,8 +110,7 @@ button {
     border-top-color: lighten($button, 15%);
     border-right-color: lighten($button, 15%);
     text-shadow:
-        darken($button, 15%) 0 -.1em 0;
-    
+        darken($button, 15%) 0 -.1em 0;    
     box-shadow:
         darken($button, 15%) 0 .2em 0 0,
         $black 0 .2em 0 .05em,
@@ -126,9 +126,9 @@ button {
             darken($bg, 10%) -.1em .2em 0 0;
     }
     &:focus{
-        color: #f7ca78;
+        color: #f1bc5a;
         outline:none;
-    }
+    }    
 }
 
 button.plus {   
@@ -170,9 +170,9 @@ button.black-bg {
 }
 
 #history {
-    justify-self: start;
     display: grid;
     width: 16em;
+    margin-top: 1em;
     grid-template-rows: 4.5em 13em 4.2em;
     position: relative;
 	background: $history-bg;
@@ -206,6 +206,7 @@ button.black-bg {
         display: table;
         clear: both;        
     }
+
     h2 {
         text-align: center;
         font-size: 1.8em;       
@@ -232,22 +233,21 @@ button.black-bg {
         height: 2em;
         padding-top: .25em;
         margin: 1.5em 1em 0 0;
-
     }
 }
 
-.footer {        
+footer {        
     color: $history-bg;
     text-align: center;
-    margin: 5rem;
+    margin-bottom: 3rem;
 }
   
-.mysite {
+.karen {
     color: $white;
     text-decoration: none;
 }
   
-.mysite:hover {
+.karen:hover {
     color: $red;
     text-decoration: none;
 }
@@ -256,7 +256,10 @@ button.black-bg {
   and (min-device-width: 375px) 
   and (max-device-width: 667px) 
   and (-webkit-min-device-pixel-ratio: 2) { 
-    .cal-wrapper, #history {
-        justify-self: center;
+    .container {        
+        width: 30em;    
+        grid-template-rows: 30em 30em;
+        grid-gap: 2em;
+        margin: 5em auto 2em;
     }
 }

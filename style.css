@@ -11,15 +11,15 @@ body {
 
 .container {
   display: grid;
-  width: 90%;
-  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
-  grid-gap: 6em;
+  width: 50em;
+  grid-template-columns: 25em 10em;
+  grid-gap: 7em;
   align-items: center;
-  margin: 8em auto 1em;
+  justify-items: center;
+  margin: 5em auto;
 }
 
 .cal-wrapper {
-  justify-self: end;
   width: 11.5em;
   padding: 0.7em 0.7em 0.3em 0.7em;
   font-size: 1.8em;
@@ -77,13 +77,14 @@ body {
 
 button {
   border: 0;
+  padding: 0;
   font-family: "Roboto Mono", monospace;
   background: #606060;
   color: #e9e8e8;
   font-size: 0.75em;
   text-align: center;
   width: 2.5em;
-  height: 1.9em;
+  height: 2em;
   margin: 0.2em 0.5em 0.5em 0;
   display: block;
   float: left;
@@ -102,7 +103,7 @@ button:active {
   box-shadow: #3a3a3a 0 0.1em 0 0, #2d2d2d 0 0.1em 0 0.05em, #727c83 -0.1em 0.2em 0 0;
 }
 button:focus {
-  color: #f7ca78;
+  color: #f1bc5a;
   outline: none;
 }
 
@@ -133,9 +134,9 @@ button.black-bg {
 }
 
 #history {
-  justify-self: start;
   display: grid;
   width: 16em;
+  margin-top: 1em;
   grid-template-rows: 4.5em 13em 4.2em;
   position: relative;
   background: #c3c9d3;
@@ -193,25 +194,28 @@ button.black-bg {
   margin: 1.5em 1em 0 0;
 }
 
-.footer {
+footer {
   color: #c3c9d3;
   text-align: center;
-  margin: 5rem;
+  margin-bottom: 3rem;
 }
 
-.mysite {
+.karen {
   color: #e9e8e8;
   text-decoration: none;
 }
 
-.mysite:hover {
+.karen:hover {
   color: #931a52;
   text-decoration: none;
 }
 
 @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) {
-  .cal-wrapper, #history {
-    justify-self: center;
+  .container {
+    width: 30em;
+    grid-template-rows: 30em 30em;
+    grid-gap: 2em;
+    margin: 5em auto 2em;
   }
 }
 
