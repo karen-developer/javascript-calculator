@@ -254,12 +254,14 @@ footer {
 
 @media only screen 
   and (min-device-width: 414px) 
-  and (max-device-width: 736px) 
-  and (-webkit-min-device-pixel-ratio: 3)  { 
-    .container {        
+  and (max-device-width: 736px) { 
+    .container {      
+        display: grid;
         width: 30em;    
         grid-template-rows: 30em 30em;
         grid-gap: 2em;
+        align-items: center;
+        justify-items: center;
         margin: 5em auto 2em;
     }
 }
