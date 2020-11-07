@@ -19,9 +19,9 @@ body {
 
 .container {
     display: grid;
-    width: 50em;
-    grid-template-columns: 25em 10em;
-    grid-gap: 7em;
+    width: 60%;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    grid-gap: 5em;
     align-items: center;
     justify-items: center;
     margin: 5em auto;
@@ -249,19 +249,5 @@ footer {
     .karen:hover {
         color: rgb(243, 179, 222);
         text-decoration: none;
-    }
-}
-
-@media only screen 
-  and (min-device-width: 414px) 
-  and (max-device-width: 736px) { 
-    .container {      
-        display: grid;
-        width: 30em;    
-        grid-template-rows: 30em 30em;
-        grid-gap: 2em;
-        align-items: center;
-        justify-items: center;
-        margin: 5em auto 2em;
     }
 }
